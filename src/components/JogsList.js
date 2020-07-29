@@ -1,6 +1,7 @@
 import {connect} from 'react-redux';
 import {auth, getJogsByUser} from "../redux/actions";
 import React from "react";
+import JogInfo from "./JogInfo";
 
 class JogsList extends React.Component{
     constructor(props){
@@ -22,9 +23,8 @@ class JogsList extends React.Component{
 
     render() {
         console.log(this.props.jogList);
-        return (
-            this.props.jogList.map(jog => );
-        );
+        return this.props.jogList.map(jog => <JogInfo key={jog.id} distance={jog.distance} time={jog.time} date = {jog.date} /> );
+
     };
 }
 

@@ -1,12 +1,13 @@
 import React from "react";
-import JogsList from "./JogsList";
-
-const JogInfo = () => {
+const JogInfo = (props) => {
     return (
-        <React.Fragment>
-            <JogsList/>
-        </React.Fragment>
+        <div>
+        <p>{props.distance}</p>
+        <p>{props.time}</p>
+        <p>{props.date}</p>
+        <p>{props.distance}</p>
+        </div>
     );
 };
 
-export default JogsPage;
+export default JogInfo;

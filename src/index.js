@@ -7,6 +7,7 @@ import {compose, createStore, applyMiddleware} from "redux";
 import {Provider} from 'react-redux';
 import thunk from 'redux-thunk';
 import {rootReducer} from "./redux/rootReducer";
+import {BrowserRouter} from "react-router-dom";
 
 const store = createStore(rootReducer,
     applyMiddleware(
@@ -16,10 +17,10 @@ const store = createStore(rootReducer,
 
 
 ReactDOM.render(
-  <Provider store={store}>
-    <App />
-  </Provider>,
-  document.getElementById('root')
+    <Provider store={store}>
+            <App/>
+    </Provider>,
+    document.getElementById('root')
 );
 
 // If you want your app to work offline and load faster, you can change
