@@ -6,7 +6,12 @@ body {
   height: 116px;
   background: #7ed321;
 }
-.header-wr::before{
+
+.logo-wr{
+  float: left;
+  height: 100%;
+}
+.logo-wr::before{
   content: "";
   display: inline-block;
   height: 100%;
@@ -16,6 +21,35 @@ body {
   display: inline-block;
   vertical-align: middle;
   margin-left: 37px;
+}
+.menu-wr{
+  float: right;
+  height: 100%;
+}
+.menu-wr::before{
+  content: "";
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+.header-menu{
+  display: inline-block;
+  vertical-align: middle;
+}
+.header-menu-item{
+  display: inline-block;
+  margin-right: 45px;
+
+}
+.header-menu-item a{
+  font-size: 14px;
+  font-weight: bold;
+  color: white!important;
+  text-decoration: none;
+}
+
+.header-menu-item a.active{
+  text-decoration: underline white;
 }
 .form-wr{
   height: 800px;
@@ -52,4 +86,154 @@ body {
   font-weight: bold;
   line-height: 60px;
   color: white;
+}
+
+/* info page*/
+
+.info-page {
+  width: 600px;
+  margin: auto;
+
+}
+.info-page-title{
+  color: #7ed321;
+  font-size: 36px;
+  font-weight: bold;
+  margin-top: 85px;
+}
+.info-page-text{
+  margin-top: 15px;
+  font-size: 14px;
+  line-height: 24px;
+}
+/* jog page */
+
+.jog-list-page{
+  width: 300px;
+  margin:auto;
+}
+li.jog-wr{
+  list-style: none;
+  margin-top: 50px;
+}
+.jog-img-wr{
+  display: inline-block;
+  margin-right: 46px;
+}
+.jog-info-wr{
+  display: inline-block;
+}
+
+.jog-info-wr p{
+  font-size: 14px;
+  line-height: 24px;
+  margin: 0;
+}
+.jog-info-wr span.gray{
+  font-size: 14px;
+  line-height: 24px;
+  margin: 0;
+  color: darkgray;
+}
+.add-jog-wr{
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+}
+/*jog filter*/
+.jog-filter-wr{
+  background: #eaeaea;
+  height: 60px;
+  text-align: center;
+}
+.jog-filter{
+  margin: auto;
+}
+.jog-filter .start,
+.jog-filter .finish
+{
+  display: inline-block;
+  margin: 15px;
+}
+.jog-filter .start input,
+.jog-filter .finish input{
+  box-sizing: border-box;
+  padding: 5px;
+  width: 100px;
+  height: 30px;
+  border-radius: 11px;
+  border: 1px solid #979797;
+}
+.jog-filter .start .title,
+.jog-filter .finish .title{
+  font-size: 13px;
+  color: #979797;
+  margin-right: 15px;
+}
+
+/*modal*/
+
+.modal-add-jog-wr{
+  height: 800px;
+  text-align: center;
+}
+.modal-add-jog-wr::before{
+  content: "";
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+.modal-add-jog{
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  border-radius: 44px;
+  text-align: center;
+  height: 379px;
+  width: 503px;
+  background-color: #7ed321;
+}
+.modal-add-jog .cancel{
+  position: absolute;
+  top: 29px;
+  right: 29px;
+}
+.modal-add-jog .form-add-jog {
+  width: 320px;
+  margin: 100px auto auto auto
+}
+.modal-add-jog .form-add-jog label{
+  display: inline-block;
+  width: 30%;
+  text-align: left;
+  font-size: 16px;
+  line-height: 31px;
+}
+.modal-add-jog .form-add-jog .form-group{
+  margin-bottom: 25px;
+}
+.modal-add-jog .form-add-jog input{
+  display: inline-block;
+  width: 70%;
+  height: 31px;
+  border: none!important;
+  padding: 5px;
+  box-sizing: border-box ;
+  /*outline: solid 1px #979797;*/
+  /*-moz-outline-radius: 7px 7px 7px 7px;*/
+  border-radius: 7px;
+}
+.modal-add-jog .form-add-jog input:focus{
+  outline: none;
+}
+.modal-add-jog .form-add-jog .save{
+  width: 320px;
+  border: 2px solid white;
+  border-radius: 25px;
+  height: 42px;
+  margin-top: 26px;
+  background: #7ed321;
+  color: white;
+  font-size: 14px;
+  line-height: 42px;
 }

@@ -6,6 +6,7 @@ import JogsPage from "./components/JogsPage";
 import {BrowserRouter , Link, NavLink, Redirect, Route, Switch} from "react-router-dom";
 import ContactPage from "./components/ContactPage";
 import InfoPage from "./components/InfoPage";
+import AddModal from "./components/AddModal";
 
 class App  extends React.Component{
     constructor(props){
@@ -21,12 +22,18 @@ class App  extends React.Component{
         return (
             <BrowserRouter>
                 <Header/>
+                {this.props.isAddModal ? <Redirect to="/add"/> : <Redirect to="/auth" />}
+                {this.props.isAuth === false ? <Redirect to="/auth" /> : false}
                 <Switch>
-                    <Route exact path="/">
+
+                    <Route exact path="/auth">
                         {this.props.isAuth? <Redirect to="/jogs" /> : <AuthForm/>}
                     </Route>
+                    <Route exact path="/add">
+                        <AddModal/>
+                    </Route>
                     <Route path="/jogs">
-                        {this.props.isAuth === false ? <Redirect to="/" /> : <JogsPage/>}
+                        <JogsPage/>
                     </Route>
                     <Route path="/info">
                         <InfoPage />
@@ -43,34 +50,7 @@ const mstp = state => (
     {
         isAuth : state.jog.isAuth,
         accessToken : state.jog.accessToken,
+        isAddModal: state.jog.isAddModal,
     }
 );
 export default connect(mstp)(App);
-
-
-// You can think of these components as "pages"
-// in your app.
-
-function Home() {
-    return (
-        <div>
-            <h2>Home</h2>
-        </div>
-    );
-}
-
-function About() {
-    return (
-        <div>
-            <h2>About</h2>
-        </div>
-    );
-}
-
-function Dashboard() {
-    return (
-        <div>
-            <h2>Dashboard</h2>
-        </div>
-    );
-}

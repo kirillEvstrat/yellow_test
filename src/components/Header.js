@@ -5,8 +5,13 @@ import Menu from "./Menu";
 const Header = () => {
     return (
         <div className='header-wr'>
-            <img className='header-logo' src={headerImg} alt="logo"/>
-            <Menu/>
+            <div className='logo-wr'>
+                <img className='header-logo' src={headerImg} alt="logo"/>
+            </div>
+            <div className="menu-wr">
+                <Menu/>
+            </div>
+
         </div>
     );
 };
