@@ -9,14 +9,6 @@ import {
     OPEN_UPDATE_MODAL
 } from "./types";
 
-// export function createPost(post) {
-//     return{
-//         type: CREATE_POST,
-//         payload: post
-//     }
-//
-// }
-
 export function auth() {
     return async dispatch => {
         try{
@@ -79,26 +71,19 @@ export function getJogsByUser(token) {
 export function addJog(token, data) {
     return async dispatch => {
         try{
-            // const form_data = new FormData();
-            //
             let formData = "";
             for ( let key in data ) {
                 formData += key + "=" + data[key]+ "&" ;
             }
             formData = formData.slice(0, formData.length-1);
-
-            console.log(formData);
-
             const response = await fetch('https://jogtracker.herokuapp.com/api/v1/data/jog',
                 {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/x-www-form-urlencoded',
                         'Authorization' : "Bearer " +token,
-
                     },
                     body: formData,
-
                 }
             );
             const json = await response.json();
@@ -115,26 +100,19 @@ export function addJog(token, data) {
 export function updateJog(token, data) {
     return async dispatch => {
         try{
-            // const form_data = new FormData();
-            //
             let formData = "";
             for ( let key in data ) {
                 formData += key + "=" + data[key]+ "&" ;
             }
             formData = formData.slice(0, formData.length-1);
-
-            console.log(formData);
-
             const response = await fetch('https://jogtracker.herokuapp.com/api/v1/data/jog',
                 {
                     method: 'PUT',
                     headers: {
                         'Content-Type': 'application/x-www-form-urlencoded',
                         'Authorization' : "Bearer " +token,
-
                     },
                     body: formData,
-
                 }
             );
             const json = await response.json();

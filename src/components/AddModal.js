@@ -18,7 +18,6 @@ class AddModal extends React.Component {
                 distance : props.data.distance,
                 time : props.data.time,
                 date : date,
-
             }
         }
         else{
@@ -28,7 +27,6 @@ class AddModal extends React.Component {
                 date : new Date(),
             }
         }
-
     };
 
     onChangeHandler (event){
@@ -74,9 +72,7 @@ class AddModal extends React.Component {
                             selected={this.state.date}
                             onChange={this.handleChangeTime}
                         />
-
                     </div>
-
                     <div  className='save' onClick={(e) => this.onSubmitHandler(e)}>Save</div>
                 </form>
             </div>
@@ -87,7 +83,7 @@ class AddModal extends React.Component {
 }
 const mstp = state =>{
     return {
-        accessToken : state.jog.accessToken,
+        accessToken : state.app.accessToken,
     }
 };
 

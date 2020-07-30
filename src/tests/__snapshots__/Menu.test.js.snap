@@ -1,0 +1,241 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Link changes the class when hovered 1`] = `
+<div
+  className="header-menu"
+>
+  <div
+    className="header-menu-item"
+  >
+    <a
+      aria-current={null}
+      href="/jogs"
+      onClick={[Function]}
+    >
+      JOGS
+    </a>
+  </div>
+  <div
+    className="header-menu-item"
+  >
+    <a
+      aria-current={null}
+      href="/info"
+      onClick={[Function]}
+    >
+      INFO
+    </a>
+  </div>
+  <div
+    className="header-menu-item"
+  >
+    <a
+      aria-current={null}
+      href="/contact"
+      onClick={[Function]}
+    >
+      CONTACT US
+    </a>
+  </div>
+</div>
+`;
+
+exports[`Link changes the class when hovered 2`] = `
+<div
+  className="header-menu"
+>
+  <div
+    className="header-menu-item"
+  >
+    <a
+      aria-current={null}
+      href="/jogs"
+      onClick={[Function]}
+    >
+      JOGS
+    </a>
+  </div>
+  <div
+    className="header-menu-item"
+  >
+    <a
+      aria-current={null}
+      href="/info"
+      onClick={[Function]}
+    >
+      INFO
+    </a>
+  </div>
+  <div
+    className="header-menu-item"
+  >
+    <a
+      aria-current={null}
+      href="/contact"
+      onClick={[Function]}
+    >
+      CONTACT US
+    </a>
+  </div>
+</div>
+`;
+
+exports[`Link changes the class when hovered 3`] = `
+<div
+  className="header-menu"
+>
+  <div
+    className="header-menu-item"
+  >
+    <a
+      aria-current={null}
+      href="/jogs"
+      onClick={[Function]}
+    >
+      JOGS
+    </a>
+  </div>
+  <div
+    className="header-menu-item"
+  >
+    <a
+      aria-current={null}
+      href="/info"
+      onClick={[Function]}
+    >
+      INFO
+    </a>
+  </div>
+  <div
+    className="header-menu-item"
+  >
+    <a
+      aria-current={null}
+      href="/contact"
+      onClick={[Function]}
+    >
+      CONTACT US
+    </a>
+  </div>
+</div>
+`;
+
+exports[`render menu with routing 1`] = `
+<div
+  className="header-menu"
+>
+  <div
+    className="header-menu-item"
+  >
+    <a
+      aria-current={null}
+      href="/jogs"
+      onClick={[Function]}
+    >
+      JOGS
+    </a>
+  </div>
+  <div
+    className="header-menu-item"
+  >
+    <a
+      aria-current={null}
+      href="/info"
+      onClick={[Function]}
+    >
+      INFO
+    </a>
+  </div>
+  <div
+    className="header-menu-item"
+  >
+    <a
+      aria-current={null}
+      href="/contact"
+      onClick={[Function]}
+    >
+      CONTACT US
+    </a>
+  </div>
+</div>
+`;
+
+exports[`render menu with routing 2`] = `
+<div
+  className="header-menu"
+>
+  <div
+    className="header-menu-item"
+  >
+    <a
+      aria-current={null}
+      href="/jogs"
+      onClick={[Function]}
+    >
+      JOGS
+    </a>
+  </div>
+  <div
+    className="header-menu-item"
+  >
+    <a
+      aria-current={null}
+      href="/info"
+      onClick={[Function]}
+    >
+      INFO
+    </a>
+  </div>
+  <div
+    className="header-menu-item"
+  >
+    <a
+      aria-current={null}
+      href="/contact"
+      onClick={[Function]}
+    >
+      CONTACT US
+    </a>
+  </div>
+</div>
+`;
+
+exports[`render menu with routing 3`] = `
+<div
+  className="header-menu"
+>
+  <div
+    className="header-menu-item"
+  >
+    <a
+      aria-current={null}
+      href="/jogs"
+      onClick={[Function]}
+    >
+      JOGS
+    </a>
+  </div>
+  <div
+    className="header-menu-item"
+  >
+    <a
+      aria-current={null}
+      href="/info"
+      onClick={[Function]}
+    >
+      INFO
+    </a>
+  </div>
+  <div
+    className="header-menu-item"
+  >
+    <a
+      aria-current={null}
+      href="/contact"
+      onClick={[Function]}
+    >
+      CONTACT US
+    </a>
+  </div>
+</div>
+`;

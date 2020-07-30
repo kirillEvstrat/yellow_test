@@ -1,9 +1,9 @@
 import {connect} from 'react-redux';
-import {auth, getJogsByUser, openAddModal} from "../redux/actions";
+import {getJogsByUser, openAddModal} from "../redux/actions";
 import React from "react";
 import JogInfo from "./JogInfo";
 import addImg from '../images/add.svg';
-import JogsFilter from "./JogsFilter";
+
 
 class JogsList extends React.Component{
     constructor(props){
@@ -14,9 +14,8 @@ class JogsList extends React.Component{
     };
 
     componentDidMount() {
-       // console.log('mount');
+        // console.log('mount');
         //this.props.getJogsByUser(this.props.accessToken);
-
     }
 
     addJogHandler = (e) => {
@@ -24,34 +23,28 @@ class JogsList extends React.Component{
     };
 
     render() {
-        console.log(this.props.jogList);
         return (
-                <div>
-                    <JogsFilter/>
-                    <div className='jog-list-page'>
-                        <ul>
-                        {this.props.jogList.map(jog => <JogInfo id={jog.id} distance={jog.distance} time={jog.time} date = {jog.date} /> )}
-                        </ul>
-                    </div>
-                    <div className='add-jog-wr'>
-                        <img src={addImg} alt="add" onClick={this.addJogHandler}/>
-                    </div>
+            <div>
+                <div className='jog-list-page'>
+                    <ul>
+                        {this.props.jogList.map(jog => <JogInfo key={jog.id} id={jog.id} distance={jog.distance} time={jog.time} date = {jog.date} /> )}
+                    </ul>
                 </div>
-
+                <div className='add-jog-wr'>
+                    <img src={addImg} alt="add" onClick={this.addJogHandler}/>
+                </div>
+            </div>
         )
-
     };
 }
 
 const mstp = state =>(
     {
-        accessToken : state.jog.accessToken,
         jogList : state.jog.filterJogList,
     }
 );
 
 const mdtp = {
-    getJogsByUser,
     openAddModal,
 };
 

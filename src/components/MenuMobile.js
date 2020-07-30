@@ -1,9 +1,4 @@
 import React from "react";
-import JogsFilter from "./JogsFilter";
-import JogInfo from "./JogInfo";
-import addImg from "../images/add.svg";
-import {getJogsByUser, openAddModal} from "../redux/actions";
-import {connect} from "react-redux";
 import {NavLink} from "react-router-dom";
 import Menu from "../images/menu.png";
 import close from "../images/close.png";
@@ -31,7 +26,6 @@ class MenuMobile extends React.Component{
                 <div className='mobile-menu-wr'>
                     <img className='menu-logo' src={logo} alt=""/>
                     <img className='menu-close' src={close} alt="" onClick={e => this.openHandler(e)}/>
-
                     <div className='mobile-menu-items'>
                         <div className='mobile-menu-item'>
                             <NavLink to='/jogs'>JOGS</NavLink>
@@ -43,12 +37,9 @@ class MenuMobile extends React.Component{
                             <NavLink to='/contact'>CONTACT US</NavLink>
                         </div>
                     </div>
-
                 </div>
                 )
-
         )
-
     };
 }
 

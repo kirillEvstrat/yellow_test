@@ -15,8 +15,6 @@ class App  extends React.Component{
         this.state = {
 
         };
-
-
     };
 
     componentDidMount() {
@@ -35,7 +33,6 @@ class App  extends React.Component{
                 {this.props.isUpdateModal ? <Redirect to="/update"/> : <Redirect to="/auth" />}
 
                 <Switch>
-
                     <Route exact path="/auth">
                         {this.props.isAuth? <Redirect to="/jogs" /> : <AuthForm/>}
                     </Route>
@@ -43,10 +40,7 @@ class App  extends React.Component{
                         <AddModal/>
                     </Route>
                     <Route path="/update">
-                        <AddModal
-                            isUpdate={true}
-                            data={this.props.updateData[0]}
-                        />
+                        {this.props.isUpdateModal ? <AddModal isUpdate={true} data={this.props.updateData[0]}/> : <Redirect to="/auth"/>}
                     </Route>
                     <Route path="/jogs">
                         <JogsPage/>
@@ -64,12 +58,12 @@ class App  extends React.Component{
 }
 const mstp = state => (
     {
-        isAuth : state.jog.isAuth,
-        accessToken : state.jog.accessToken,
-        isAddModal: state.jog.isAddModal,
-        isUpdateModal: state.jog.isUpdateModal,
-        updateId : state.jog.updateID,
-        updateData : state.jog.jogList.filter(jog => jog.id === state.jog.updateID)
+        isAuth : state.app.isAuth,
+        accessToken : state.app.accessToken,
+        isAddModal: state.app.isAddModal,
+        isUpdateModal: state.app.isUpdateModal,
+        updateId : state.app.updateID,
+        updateData : state.jog.jogList.filter(jog => jog.id === state.app.updateID)
     }
 );
 

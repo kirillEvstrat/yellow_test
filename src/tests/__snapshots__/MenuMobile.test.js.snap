@@ -1,0 +1,120 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`close/open mobile menu with routing 1`] = `
+<img
+  alt=""
+  className="menu-open"
+  onClick={[Function]}
+  src="menu.png"
+/>
+`;
+
+exports[`close/open mobile menu with routing 2`] = `
+<div
+  className="mobile-menu-wr"
+>
+  <img
+    alt=""
+    className="menu-logo"
+    src="logo.png"
+  />
+  <img
+    alt=""
+    className="menu-close"
+    onClick={[Function]}
+    src="close.png"
+  />
+  <div
+    className="mobile-menu-items"
+  >
+    <div
+      className="mobile-menu-item"
+    >
+      <a
+        aria-current={null}
+        href="/jogs"
+        onClick={[Function]}
+      >
+        JOGS
+      </a>
+    </div>
+    <div
+      className="mobile-menu-item"
+    >
+      <a
+        aria-current={null}
+        href="/info"
+        onClick={[Function]}
+      >
+        INFO
+      </a>
+    </div>
+    <div
+      className="mobile-menu-item"
+    >
+      <a
+        aria-current={null}
+        href="/contact"
+        onClick={[Function]}
+      >
+        CONTACT US
+      </a>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`close/open mobile menu with routing 3`] = `
+<div
+  className="mobile-menu-wr"
+>
+  <img
+    alt=""
+    className="menu-logo"
+    src="logo.png"
+  />
+  <img
+    alt=""
+    className="menu-close"
+    onClick={[Function]}
+    src="close.png"
+  />
+  <div
+    className="mobile-menu-items"
+  >
+    <div
+      className="mobile-menu-item"
+    >
+      <a
+        aria-current={null}
+        href="/jogs"
+        onClick={[Function]}
+      >
+        JOGS
+      </a>
+    </div>
+    <div
+      className="mobile-menu-item"
+    >
+      <a
+        aria-current={null}
+        href="/info"
+        onClick={[Function]}
+      >
+        INFO
+      </a>
+    </div>
+    <div
+      className="mobile-menu-item"
+    >
+      <a
+        aria-current={null}
+        href="/contact"
+        onClick={[Function]}
+      >
+        CONTACT US
+      </a>
+    </div>
+  </div>
+</div>
+`;

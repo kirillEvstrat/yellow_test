@@ -10,41 +10,25 @@ const Header = (props) => {
     return (
         <div className='header-wr'>
             <div className='logo-wr'>
-                <Media query="(max-width: 599px)" render={() =>
-                    (
-                        <img className='header-logo' src={headerImgM} alt="logo"/>
-                    )}
-                />
-                <Media query="(min-width: 600px)" render={() =>
-                    (
-                        <img className='header-logo' src={headerImg} alt="logo"/>
-                    )}
-                />
+                <Media query="(max-width: 599px)" render={() => (<img className='header-logo' src={headerImgM} alt="logo"/>)}/>
+                <Media query="(min-width: 600px)" render={() => (<img className='header-logo' src={headerImg} alt="logo"/>)}/>
             </div>
             {props.isAuth ? (
                 <>
                     <div className="menu-wr">
-                    <Media query="(min-width: 600px)" render={() =>
-                        (
-                            <Menu/>
-                        )}
-                    />
+                    <Media query="(min-width: 600px)" render={() => (<Menu/>)}/>
                     </div>
-                    <Media query="(max-width: 599px)" render={() =>
-                        (
-                            <MenuMobile/>
-                        )}
-                    />
+                    <Media query="(max-width: 599px)" render={() => (<MenuMobile/>)}/>
                 </>
-                ) : false }
-
+                ) : false
+            }
         </div>
     );
 };
 
 const mstp = state => {
     return{
-        isAuth: state.jog.isAuth,
+        isAuth: state.app.isAuth,
     }
 };
 
