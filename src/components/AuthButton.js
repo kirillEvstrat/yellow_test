@@ -1,6 +1,7 @@
 import React from "react";
 import {connect} from 'react-redux';
 import {auth} from "../redux/actions";
+import Media from "react-media";
 
 class AuthButton extends React.Component{
     constructor(props){
@@ -16,7 +17,9 @@ class AuthButton extends React.Component{
 
     render() {
         return (
-        <div className="auth-button" onClick={this.authHandler}>{this.props.text}</div>
+
+                 <div className="auth-button" onClick={this.authHandler}>{this.props.text}</div>
+
         );
     };
 }

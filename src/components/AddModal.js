@@ -1,16 +1,34 @@
 import React from "react";
 import cancelImg from "../images/cancel.svg"
 import {connect} from "react-redux";
-import {addJog, closeAddModal} from "../redux/actions";
+import {addJog, closeAddModal, updateJog} from "../redux/actions";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
 class AddModal extends React.Component {
     constructor(props){
         super(props);
-        this.state = {
-            distance : "",
-            time : "",
-            date : "",
+        console.log(props);
+
+        if(props.isUpdate){
+            const date = new Date(props.data.date * 1000);
+            this.state = {
+                jog_id : props.data.id,
+                user_id : props.data.user_id,
+                distance : props.data.distance,
+                time : props.data.time,
+                date : date,
+
+            }
         }
+        else{
+            this.state = {
+                distance : "",
+                time : "",
+                date : new Date(),
+            }
+        }
+
     };
 
     onChangeHandler (event){
@@ -20,9 +38,20 @@ class AddModal extends React.Component {
             }}))
     };
 
+    handleChangeTime = date => {
+        this.setState( prev=>({...prev, ...{
+                date : date
+            }}));
+    };
+
     onSubmitHandler (e) {
         e.persist();
-        this.props.addJog(this.props.accessToken, this.state);
+        if(this.props.isUpdate){
+            this.props.updateJog(this.props.accessToken, this.state);
+        }
+        else {
+            this.props.addJog(this.props.accessToken, this.state);
+        }
     };
 
     render () {
@@ -33,15 +62,19 @@ class AddModal extends React.Component {
                 <form className='form-add-jog' action="">
                     <div className="form-group">
                         <label htmlFor="distance">Distance</label>
-                        <input name='distance' type="text" value={this.state.distance} onChange={(e) => this.onChangeHandler(e) }/>
+                        <input name='distance' type="number" value={this.state.distance} onChange={(e) => this.onChangeHandler(e) }/>
                     </div>
                     <div className="form-group">
                         <label htmlFor="time">Time</label>
-                        <input name="time" type="text" value={this.state.time} onChange={(e) => this.onChangeHandler(e) }/>
+                        <input name="time" type="number" value={this.state.time} onChange={(e) => this.onChangeHandler(e) }/>
                     </div>
                     <div className="form-group">
                         <label htmlFor="date">Date</label>
-                        <input name="date" type="text" value={this.state.date} onChange={(e) => this.onChangeHandler(e) }/>
+                        <DatePicker name='date'
+                            selected={this.state.date}
+                            onChange={this.handleChangeTime}
+                        />
+
                     </div>
 
                     <div  className='save' onClick={(e) => this.onSubmitHandler(e)}>Save</div>
@@ -60,6 +93,7 @@ const mstp = state =>{
 
 const mdtp ={
     addJog,
+    updateJog,
     closeAddModal
 };
 

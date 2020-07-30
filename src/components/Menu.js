@@ -5,8 +5,8 @@ const Menu = () => {
     return (
         <div className='header-menu'>
             <div className='header-menu-item'>
-                <NavLink to='/jogs'>JOGS</NavLink>
-            </div>
+            <NavLink to='/jogs'>JOGS</NavLink>
+        </div>
             <div className='header-menu-item'>
                 <NavLink to='/info'>INFO</NavLink>
             </div>

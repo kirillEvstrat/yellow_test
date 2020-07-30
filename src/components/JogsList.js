@@ -30,7 +30,7 @@ class JogsList extends React.Component{
                     <JogsFilter/>
                     <div className='jog-list-page'>
                         <ul>
-                        {this.props.jogList.map(jog => <JogInfo key={jog.id} distance={jog.distance} time={jog.time} date = {jog.date} /> )}
+                        {this.props.jogList.map(jog => <JogInfo id={jog.id} distance={jog.distance} time={jog.time} date = {jog.date} /> )}
                         </ul>
                     </div>
                     <div className='add-jog-wr'>

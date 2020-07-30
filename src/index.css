@@ -51,28 +51,36 @@ body {
 .header-menu-item a.active{
   text-decoration: underline white;
 }
-.form-wr{
-  height: 800px;
-  text-align: center;
-}
-.form-wr::before{
-  content: "";
-  display: inline-block;
-  height: 100%;
-  vertical-align: middle;
-}
-.form-auth{
-  display: inline-block;
-  vertical-align: middle;
-  border-radius: 44px;
-  text-align: center;
-  height: 379px;
-  width: 503px;
-  background-color: #e990f9;
-}
+
+  .form-wr{
+    height: 800px;
+    text-align: center;
+  }
+  .form-wr::before{
+    content: "";
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+  }
+  .form-auth{
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 44px;
+    text-align: center;
+    height: 379px;
+    width: 503px;
+    background-color: #e990f9;
+  }
+
+
 .form-logo{
   margin-top: 77px;
   margin-bottom: 56px;
+}
+.form-logo-mobile{
+    display: block;
+    margin: 100px auto 100px auto ;
+
 }
 .auth-button{
   display: block;
@@ -87,6 +95,7 @@ body {
   line-height: 60px;
   color: white;
 }
+
 
 /* info page*/
 
@@ -143,7 +152,7 @@ li.jog-wr{
 /*jog filter*/
 .jog-filter-wr{
   background: #eaeaea;
-  height: 60px;
+
   text-align: center;
 }
 .jog-filter{
@@ -223,6 +232,14 @@ li.jog-wr{
   /*-moz-outline-radius: 7px 7px 7px 7px;*/
   border-radius: 7px;
 }
+.form-add-jog .react-datepicker-wrapper{
+  width: 70%;
+
+}
+.form-add-jog .react-datepicker-wrapper input{
+  width: 100%;
+
+}
 .modal-add-jog .form-add-jog input:focus{
   outline: none;
 }
@@ -236,4 +253,129 @@ li.jog-wr{
   color: white;
   font-size: 14px;
   line-height: 42px;
+}
+/*   mobile   */
+@media screen and (max-width: 599px) {
+  .auth-button {
+    color: #e990f9;
+    background-color: white;
+    border: 3px solid #e990f9;
+    text-align: center;
+  }
+  .menu-close{
+    width: 25px;
+    height: 25px;
+    position: fixed;
+    top: 27px;
+    right: 27px;
+  }
+  .mobile-menu-wr .menu-logo{
+    position: fixed;
+    top: 20px;
+    left: 25px;
+  }
+  .menu-open{
+    position: absolute;
+    right: 27px;
+    top: 27px;
+  }
+  .mobile-menu-wr{
+    z-index: 1;
+  }
+  .mobile-menu-wr::before{
+    content: "";
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+  }
+  .mobile-menu-items {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    vertical-align: middle;
+  }
+  .mobile-menu-item{
+    margin: 40px auto;
+  }
+  .mobile-menu-item a{
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: none;
+
+    color: #333333;
+  }
+  .mobile-menu-item a.active{
+     color: #7ed321;
+  }
+  .header-wr{
+    height: 77px;
+  }
+  .jog-list-page{
+    width: 100%;
+    text-align: center;
+  }
+  .jog-list-page ul{
+    padding: 0px;
+  }
+  .jog-info-wr{
+    text-align: left;
+  }
+  .add-jog-wr {
+    right: 25px;
+    bottom: 25px;
+  }
+  .add-jog-wr img{
+    width: 47px;
+    height: 47px;
+
+  }
+  .modal-add-jog-wr{
+    height: 500px;
+  }
+  .modal-add-jog{
+    width: 300px;
+  }
+  .modal-add-jog .form-add-jog{
+    width: 300px;
+    margin-top: 50px;
+  }
+  .modal-add-jog .form-group{
+    width: 80%;
+    margin: 15px auto;
+  }
+  .modal-add-jog .form-group input{
+    display: block;
+    width: 100%;
+  }
+  .modal-add-jog .form-group label{
+    display: block;
+    width: 100%;
+  }
+  .modal-add-jog .form-add-jog .save{
+    width: 80%;
+    margin: auto;
+  }
+  .form-add-jog .react-datepicker-wrapper{
+    width: 100%;
+
+  }
+  .info-page{
+    width: 90%;
+    padding: 20px;
+    margin: auto;
+  }
+  .info-page-title{
+    margin: 30px 0px;
+  }
+  .info-page-text{
+    margin: 0px;
+  }
+
+  .mobile-menu-wr{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: white;
+  }
 }
